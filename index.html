@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart SVG Logo Generator Pro - Verynt Pro</title>
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Default font for UI -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Navbar Header -->
+    <header class="header">
+      <div class="logo-area">
+        <span class="logo-icon">⚡</span>
+        <h1>Verynt <span class="accent-text">LogoPro</span></h1>
+        <span class="badge">OFFLINE VECTOR ENGINE</span>
+      </div>
+      <nav class="navigation">
+        <a href="http://localhost:80" class="back-link">← Portal Hub</a>
+      </nav>
+    </header>
+
+    <!-- Main Workspace Split -->
+    <main class="main-split">
+      
+      <!-- Control Panel (Left Column) -->
+      <section class="control-panel glass-card">
+        <div class="panel-section">
+          <h2>1. Brand Identity</h2>
+          <div class="input-group">
+            <label for="brand-name">Brand Name</label>
+            <input type="text" id="brand-name" value="VERYNT" placeholder="Enter company name">
+          </div>
+          <div class="input-group">
+            <label for="brand-slogan">Slogan / Sub-text</label>
+            <input type="text" id="brand-slogan" value="CREATIVE STUDIO" placeholder="Enter tagline">
+          </div>
+          <div class="input-group">
+            <label for="brand-initials">Initials / Monogram</label>
+            <input type="text" id="brand-initials" value="V" maxlength="3" placeholder="V">
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <h2>2. Layout Preset</h2>
+          <div class="preset-grid">
+            <button class="preset-card active" data-preset="badge">
+              <div class="preset-preview-icon">⚙️</div>
+              <span>Emblem Badge</span>
+            </button>
+            <button class="preset-card" data-preset="hexagon">
+              <div class="preset-preview-icon">⬡</div>
+              <span>Tech Hexagon</span>
+            </button>
+            <button class="preset-card" data-preset="shield">
+              <div class="preset-preview-icon">🛡️</div>
+              <span>Sleek Shield</span>
+            </button>
+            <button class="preset-card" data-preset="monogram">
+              <div class="preset-preview-icon">🔲</div>
+              <span>Classic Monogram</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <h2>3. Icon Element</h2>
+          <div class="input-group">
+            <label for="icon-select">Choose Core Icon</label>
+            <select id="icon-select">
+              <option value="shield">🛡️ Shield (Security & Trust)</option>
+              <option value="bolt" selected>⚡ Lightning Bolt (Energy & Speed)</option>
+              <option value="chip">🔌 Microchip (Tech & AI)</option>
+              <option value="star">⭐ Star (Premium & Quality)</option>
+              <option value="crown">👑 Crown (Luxury & Elite)</option>
+              <option value="pen">✒️ Feather Pen (Creator & Art)</option>
+              <option value="none">🚫 None (Minimalist / Monogram Only)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="panel-section">
+          <h2>4. Style & Typography</h2>
+          
+          <div class="input-group">
+            <label for="font-family-select">Typography Font</label>
+            <select id="font-family-select">
+              <option value="Cinzel">Cinzel (Classical Elegant)</option>
+              <option value="Orbitron" selected>Orbitron (Futuristic Tech)</option>
+              <option value="Montserrat">Montserrat (Modern Geometric)</option>
+              <option value="Playfair Display">Playfair Display (Premium Editorial)</option>
+              <option value="Press Start 2P">Press Start 2P (Retro Gaming)</option>
+              <option value="Outfit">Outfit (Clean Sans-Serif)</option>
+              <option value="Special Elite">Special Elite (Vintage Typewriter)</option>
+              <option value="Syncopate">Syncopate (Ultra-Wide Bold)</option>
+            </select>
+          </div>
+
+          <div class="color-picker-row">
+            <div class="color-picker-box">
+              <label for="color-primary">Primary</label>
+              <div class="color-input-wrapper">
+                <input type="color" id="color-primary" value="#6366f1">
+              </div>
+            </div>
+            <div class="color-picker-box">
+              <label for="color-secondary">Secondary</label>
+              <div class="color-input-wrapper">
+                <input type="color" id="color-secondary" value="#a855f7">
+              </div>
+            </div>
+            <div class="color-picker-box">
+              <label for="color-accent">Details</label>
+              <div class="color-input-wrapper">
+                <input type="color" id="color-accent" value="#38bdf8">
+              </div>
+            </div>
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="range-icon-scale">Icon Scale</label>
+              <span id="val-icon-scale">1.0x</span>
+            </div>
+            <input type="range" id="range-icon-scale" min="0.5" max="2.0" step="0.05" value="1.0">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="range-border-width">Border Weight</label>
+              <span id="val-border-width">4px</span>
+            </div>
+            <input type="range" id="range-border-width" min="1" max="12" step="0.5" value="4">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="range-text-spacing">Text Spacing</label>
+              <span id="val-text-spacing">4px</span>
+            </div>
+            <input type="range" id="range-text-spacing" min="0" max="15" step="0.5" value="4">
+          </div>
+
+          <div class="slider-group">
+            <div class="slider-header">
+              <label for="range-emblem-radius">Emblem Curve Radius</label>
+              <span id="val-emblem-radius">120px</span>
+            </div>
+            <input type="range" id="range-emblem-radius" min="80" max="160" step="5" value="120">
+          </div>
+        </div>
+
+        <!-- Carbon Ad Widget -->
+        <div class="carbon-ad-widget">
+          <div class="carbon-ad-badge">SPONSORED</div>
+          <div class="carbon-ad-content">
+            <div class="carbon-ad-image-placeholder">💻</div>
+            <div class="carbon-ad-text">
+              <strong>Need Pro Hosting?</strong> Get blazing fast performance and $0.00 downtime servers.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workspace Area (Right Column) -->
+      <section class="workspace-area">
+        <div class="workspace-card glass-card">
+          <div class="workspace-header">
+            <div class="workspace-title">
+              <span class="status-indicator active"></span>
+              <h3>Vector Design Viewport</h3>
+            </div>
+            <div class="bg-toggle-container">
+              <span class="label">Preview BG:</span>
+              <button class="bg-btn bg-grid active" data-bg="grid" title="Transparent Grid"></button>
+              <button class="bg-btn bg-dark" data-bg="dark" title="Solid Dark"></button>
+              <button class="bg-btn bg-light" data-bg="light" title="Solid Light"></button>
+            </div>
+          </div>
+
+          <!-- Live Canvas Container -->
+          <div class="canvas-container bg-grid-pattern" id="canvas-container">
+            <!-- The dynamic SVG will be rendered here -->
+            <div id="svg-output-wrapper"></div>
+          </div>
+
+          <!-- Download Action Bar -->
+          <div class="action-bar">
+            <button class="btn btn-secondary" id="btn-reset">
+              <span class="icon">🔄</span> Reset Layout
+            </button>
+            <button class="btn btn-primary" id="btn-export-svg">
+              <span class="icon">📐</span> Download SVG Vector
+            </button>
+            <button class="btn btn-accent" id="btn-export-png">
+              <span class="icon">🖼️</span> Download High-Res PNG
+            </button>
+          </div>
+        </div>
+
+        <!-- System Status Bar -->
+        <div class="status-bar-box glass-card">
+          <div class="status-item">
+            <span class="dot green"></span>
+            <span>Local WebGPU/Vector Engine: <strong>Active</strong></span>
+          </div>
+          <div class="status-item">
+            <span>Render Mode: <strong>XML-SVG Compilation</strong></span>
+          </div>
+          <div class="status-item">
+            <span>Export Size: <strong>1024 x 1024 px</strong></span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
